@@ -3,8 +3,8 @@ import React from 'react'
 const Movies = () => {
   return (
       <main>
-          <div>
-              <button>Movies</button>
+          <div className='moviesPage'>
+              <p>list of movies</p>
           </div>
 
       </main>

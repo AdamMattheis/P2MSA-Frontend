@@ -3,8 +3,8 @@ import React from 'react'
 const VideoGames = () => {
   return (
       <main>
-          <div>
-              <button>Video Games</button>
+          <div className='videoGamesPage'>
+             <p>list of videogames</p>
           </div>
 
       </main>

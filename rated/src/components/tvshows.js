@@ -3,8 +3,8 @@ import React from 'react'
 const TvShows = () => {
   return (
       <main>
-          <div>
-              <button>TV Shows</button>
+          <div className='tvShowsPage'>
+             <p>list of tv shows</p>
           </div>
 
       </main>
