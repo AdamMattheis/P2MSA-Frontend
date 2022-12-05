@@ -1,36 +1,30 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { useNavigate } from "react-router";
+
+//import { useNavigate, useParams } from "react-router"
 
 const Movies = () => {
 
-    function GetData() {
-        const [data, setData] = useState({})
-
-        useEffect(()=>{
-            //only need to fetch '/movies' because of proxy
-            fetch("/movies")
-            .then(res => res.json())
-            .then(data => setData(data))
-        }, []) 
-
-        return(
-            <div>
-                <div>{data.name}</div>
-                <div>{data.age}</div>  
-            </div>
-        ) 
-    }
+    const navigate = useNavigate()
     
-    
+    const [movies, setMovies] = useState([])
+
+    useEffect(()=> {
+        const fetchData = async () => {
+            const response = await fetch(`http://localhost:3000/movies`)
+            const resData = await response.json()
+            setMovies(resData)
+        }
+        fetchData()
+    }, [])
+
 
   return (
       <main>
-
           <div className='moviesPage'>
               <p>list of movies</p>
-              <GetData />
           </div>
-
       </main>
   )
 }
