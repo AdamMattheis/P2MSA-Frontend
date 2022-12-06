@@ -12,7 +12,7 @@ const Movies = () => {
 
     useEffect(()=> {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:5000/movies`)
+            const response = await fetch(`http://localhost:3000/movies`)
             const resData = await response.json()
             setMovies(resData)
         }
@@ -21,16 +21,16 @@ const Movies = () => {
 
     let moviesFormatted = movies.map((movie) => {
 		return (
-			<div className="col-sm-6" key={movie.movieId}>
+			<div className="col-sm-6" key={movie.movie_id}>
 				<h2>
-					<button onClick={() => navigate(`/movies/${movie.movieId}`)} > 
+					<button onClick={() => navigate(`/movies/${movie.movie_id}`)} > 
 						{movie.name}
                     </button> 
 				</h2>
 				<p className="text-center">
 					Rating {movie.rating}
 				</p>
-				<img style={{ maxWidth: 200 }} src={movie.pic} alt={movie.name} />
+				{/* <img style={{ maxWidth: 200 }} src={movie.pic} alt={movie.name} /> */}
 				<p className="text-center">
 					Genre {movie.genre}
 				</p>
@@ -54,7 +54,7 @@ const Movies = () => {
         <div className='moviesPage'>
             <p>list of movies</p>
         </div>
-        <div>
+        <div className='tvShowsPage'>
             {moviesFormatted}
         </div>
     </main>
