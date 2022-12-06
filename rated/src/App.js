@@ -12,10 +12,10 @@ function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/movies" element={<Movies />} />
-          <Route exact path="/tvshows" element={<TvShows />} />
-          <Route exact path="/videogames" element={<VideoGames />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/tvshows" element={<TvShows />} />
+          <Route path="/videogames" element={<VideoGames />} />
         </Routes>
       </BrowserRouter>
   );
