@@ -53,6 +53,11 @@ const Movies = () => {
         </div>
         <div className='moviesPage'>
             <p>list of movies</p>
+            <a href='/movies/new'>
+                <button>
+                    New Movie
+                </button>
+            </a>
         </div>
         <div className='tvShowsPage'>
             {moviesFormatted}

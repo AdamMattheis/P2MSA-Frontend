@@ -9,6 +9,7 @@ function EditMovieForm() {
 
     const [movie, setMovie] = useState({
 		name: '',
+        pic: '',
 		genre: '',
 		rating: '',
 		length: ''

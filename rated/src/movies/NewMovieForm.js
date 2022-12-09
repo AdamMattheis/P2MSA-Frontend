@@ -72,7 +72,7 @@ function NewMovieForm() {
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="cuisines">Movie Length</label>
+					<label htmlFor="length">Movie Length</label>
 					<input
 						value={movie.length}
 						onChange={e => setMovie({ ...movie, length: e.target.value })}
