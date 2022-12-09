@@ -4,12 +4,11 @@ function Home() {
     return (
         <main>
             <div className='title'>
-            <a href='/'>
-                <button className='title'>
-                RATED
-                </button>
-            </a>
-            
+                <a href='/'>
+                    <button className='title'>
+                        RATED
+                    </button>
+                </a>
             </div>
     
             <div>
