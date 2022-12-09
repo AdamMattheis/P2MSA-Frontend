@@ -28,7 +28,7 @@ const Movies = () => {
                     </button> 
 				</h2>
 				<p className="text-center">
-					Rating {movie.rating}
+					Rated {movie.rating}
 				</p>
 				{/* <img style={{ maxWidth: 200 }} src={movie.pic} alt={movie.name} /> */}
 				<p className="text-center">
