@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router"
-//import CommentsCard from './CommentsCard'
-//import NewCommentForm from "./NewCommentForm";
+import CommentsCard from './CommentsCard'
+import NewCommentForm from "./NewCommentForm";
 
 function MovieDetails() {
 
@@ -35,72 +35,71 @@ function MovieDetails() {
 		navigate('/movies')
 	}
 
-	// async function deleteComment(deletedComment) {
-	// 	await fetch(`http://localhost:3000/movies/${movie.movie_id}/comments/${deletedComment.comment_id}`, {
-	// 		method: 'DELETE'
-	// 	})
+	async function deleteComment(deletedComment) {
+		await fetch(`http://localhost:3000/movies/${movie.movie_id}/comments/${deletedComment.comment_id}`, {
+			method: 'DELETE'
+		})
 
-	// 	setMovie({
-	// 		...movie,
-	// 		comments: movie.comments
-	// 			.filter(comment => comment.comment_id !== deletedComment.comment_id)
-	// 	})
-	// }
+		setMovie({
+			...movie,
+			comments: movie.comments
+				.filter(comment => comment.comment_id !== deletedComment.comment_id)
+		})
+	}
 
-	// async function createComment(commentAttributes) {
-	// 	const response = await fetch(`http://localhost:3000/movies/${movie.movie_id}/comments`, {
-	// 		method: 'POST',
-	// 		headers: {
-	// 			'Content-Type': 'application/json'
-	// 		},
-	// 		body: JSON.stringify(commentAttributes)
-	// 	})
+	async function createComment(commentAttributes) {
+		const response = await fetch(`http://localhost:3000/movies/${movie.movie_id}/comments`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(commentAttributes)
+		})
 
-	// 	const comment = await response.json()
+		const comment = await response.json()
 
-	// 	setMovie({
-	// 		...movie,
-	// 		comments: [
-	// 			...movie.comments,
-	// 			comment
-	// 		]
-	// 	})
+		setMovie({
+			...movie,
+			comments: [
+				...movie.comments,
+				comment
+			]
+		})
 
-	// }
+	}
 
 
 
-	// let comments = (
-	// 	<h3 className="inactive">
-	// 		No comments yet!
-	// 	</h3>
-	// )
-	// let rating = (
-	// 	<h3 className="inactive">
-	// 		Not yet star rated
-	// 	</h3>
-	// )
-    // console.log(movie.comments)
-	// if (movie.comments.length) {
-	// 	let sumRatings = movie.comments.reduce((tot, c) => {
-	// 		return tot + c.stars
-	// 	}, 0)
-	// 	let averageRating = Math.round(sumRatings / movie.comments.length)
-	// 	let stars = ''
-	// 	for (let i = 0; i < averageRating; i++) {
-	// 		stars += '⭐️'
-	// 	}
-	// 	rating = (
-	// 		<h3>
-	// 			{stars} stars
-	// 		</h3>
-	// 	)
-	// 	comments = movie.comments.map(comment => {
-	// 		return (
-	// 			<CommentsCard key={comment.comment_id} comment={comment} onDelete={() => deleteComment(comment)} />
-	// 		)
-	// 	})
-	// }
+	let comments = (
+		<h3 className="inactive">
+			No comments yet!
+		</h3>
+	)
+	let rating = (
+		<h3 className="inactive">
+			Not yet star rated
+		</h3>
+	)
+	if (movie.comments.length) {
+		let sumRatings = movie.comments.reduce((tot, c) => {
+			return tot + c.stars
+		}, 0)
+		let averageRating = Math.round(sumRatings / movie.comments.length)
+		let stars = ''
+		for (let i = 0; i < averageRating; i++) {
+			stars += '⭐️'
+		}
+		rating = (
+			<h3>
+				{stars} stars
+			</h3>
+		)
+		comments = movie.comments.map(comment => {
+			return (
+				<CommentsCard key={comment.comment_id} comment={comment} onDelete={() => deleteComment(comment)} />
+			)
+		})
+	}
 
 
 	return (
@@ -135,7 +134,7 @@ function MovieDetails() {
 				</div>
 			</div>
 			<hr />
-			{/* <h2>Comments</h2>
+			<h2>Comments</h2>
 			<div className="row">
 				{comments}
 			</div>
@@ -144,7 +143,7 @@ function MovieDetails() {
 			<NewCommentForm
 				movie={movie}
 				onSubmit={createComment}
-			/> */}
+			/>
 		</main>
 	)
 }
