@@ -25,7 +25,7 @@ const Movies = () => {
                         <button className='detailsButton' onClick={() => navigate(`/movies/${movie.movie_id}`)} > 
                             {movie.name}
                         </button> 
-                    </div>
+                   </div>
 				</h2>
 				<p className='text-center'>
 					Rated: {movie.rating}
