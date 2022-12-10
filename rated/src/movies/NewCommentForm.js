@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-//import { useNavigate } from "react-router"
 
 function NewCommentForm({ onSubmit }) {
 

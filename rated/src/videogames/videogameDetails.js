@@ -106,7 +106,6 @@ function VideogameDetails() {
 		<main>
 			<div className="row">
 				<div className="col-sm-6">
-					{/* <img style={{ maxWidth: 200 }} src={videogame.pic} alt={videogame.name} /> */}
 					<h3>
 					    {videogame.name}
 					</h3>

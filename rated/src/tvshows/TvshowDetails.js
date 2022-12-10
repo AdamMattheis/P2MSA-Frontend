@@ -106,7 +106,6 @@ function TvshowDetails() {
 		<main>
 			<div className="row">
 				<div className="col-sm-6">
-					{/* <img style={{ maxWidth: 200 }} src={movie.pic} alt={movie.name} /> */}
 					<h3>
 					    {tvshows.name}
 					</h3>

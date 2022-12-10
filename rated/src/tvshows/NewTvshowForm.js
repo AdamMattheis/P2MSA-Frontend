@@ -7,7 +7,6 @@ function NewTvshowForm() {
 
 	const [tvshows, setTvshows] = useState({
 		name: '',
-        pic: '',
 		genre: '',
 		episodes: '',
 		length: ''
@@ -42,16 +41,6 @@ function NewTvshowForm() {
 						name="name"
 					/>
 				</div>
-				{/* <div className="form-group">
-					<label htmlFor="pic">Movie Picture</label>
-					<input
-						value={movie.pic}
-						onChange={e => setMovie({ ...movie, pic: e.target.value })}
-						className="form-control"
-						id="pic"
-						name="pic"
-					/>
-				</div> */}
 				<div className="form-group">
 					<label htmlFor="genre">Genre</label>
 					<input

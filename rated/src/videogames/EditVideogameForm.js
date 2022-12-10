@@ -9,7 +9,6 @@ function EditVideogameForm() {
 
     const [videogame, setVideogame] = useState({
 		name: '',
-        pic: '',
 		genre: '',
 		rating: ''
 	})
@@ -56,7 +55,7 @@ function EditVideogameForm() {
 					<label htmlFor="pic">Videogame Picture</label>
 					<input
 						value={videogame.pic}
-						onChange={e => setMovie({ ...videogame, pic: e.target.value })}
+						onChange={e => setVideogame({ ...videogame, pic: e.target.value })}
 						className="form-control"
 						id="pic"
 						name="pic"
@@ -66,7 +65,7 @@ function EditVideogameForm() {
 					<label htmlFor="genre">Genre</label>
 					<input
 						value={videogame.genre}
-						onChange={e => setMovie({ ...videogame, genre: e.target.value })}
+						onChange={e => setVideogame({ ...videogame, genre: e.target.value })}
 						className="form-control"
 						id="genre"
 						name="genre"
@@ -76,7 +75,7 @@ function EditVideogameForm() {
 					<label htmlFor="rating">Rated</label>
 					<input
 						value={videogame.rating}
-						onChange={e => setMovie({ ...videogame, rating: e.target.value })}
+						onChange={e => setVideogame({ ...videogame, rating: e.target.value })}
 						className="form-control"
 						id="rating"
 						name="rating"

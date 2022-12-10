@@ -114,7 +114,7 @@ hr {
   flex-flow: row wrap;
   flex: 0 0 33.33%;
   font-size: 1vw;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 10px;
   color: black;
   background-color: #ff0000;
@@ -128,8 +128,9 @@ hr {
 
 .flex{
   justify-content: space-evenly;
-  margin: 60px;
-  padding: 80px;
+  justify-items: center;
+  margin: 50px;
+  padding: 50px;
 }
 
 .NewMovieButton{
@@ -152,37 +153,14 @@ hr {
   color: black;
 }
 
-.tvShowsPage{
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 3vw;
-  padding: 30px;
-  color: whitesmoke;
-  background-color: blue;
-  flex-direction: row;
-}
+.detailsButton{
+  background: none;
+  border: none;
+  font-size: 30px;
+  background-color: transparent;
+  color: black;
+  font-family: 'Gruppo';
 
-.videoGamesPage{
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 3vw;
-  padding: 30px;
-  color: whitesmoke;
-  background-color: gold;
-  flex-direction: row;
-}
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-buttons {
-    animation: App-buttons-spin infinite 20s linear;
-  }
-} */
 
-/* @keyframes App-buttons-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+}
 

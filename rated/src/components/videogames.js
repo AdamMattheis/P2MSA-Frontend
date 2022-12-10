@@ -28,7 +28,6 @@ const Videogame = () => {
 				<p className="text-center">
 					Rated {videogame.rating}
 				</p>
-				{/* <img style={{ maxWidth: 200 }} src={movie.pic} alt={movie.name} /> */}
 				<p className="text-center">
 					Genre {videogame.genre}
         </p>

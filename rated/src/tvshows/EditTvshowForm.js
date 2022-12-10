@@ -9,7 +9,6 @@ function EditTvshowForm() {
 
     const [tvshows, setTvshows] = useState({
 		name: '',
-        pic: '',
 		genre: '',
 		episodes: '',
 		length: ''

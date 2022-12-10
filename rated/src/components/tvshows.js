@@ -1,8 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { useNavigate } from "react-router";
-
-//import { useNavigate, useParams } from "react-router"
+import { useNavigate } from "react-router"
 
 const Tvshows = () => {
 
@@ -27,7 +25,6 @@ const Tvshows = () => {
 						{tvshows.name}
                     </button> 
 				</h2>
-				{/* <img style={{ maxWidth: 200 }} src={movie.pic} alt={movie.name} /> */}
 				<p className="text-center">
 					Genre {tvshows.genre}
 				</p>

@@ -104,9 +104,9 @@ function MovieDetails() {
 
 	return (
 		<main>
-			<div className="row">
+			<div className="text center">
 				<div className="col-sm-6">
-					{/* <img style={{ maxWidth: 200 }} src={movie.pic} alt={movie.name} /> */}
+					<img style={{ maxWidth: 200 }} src={movie.pic} alt={movie.name} />
 					<h3>
 					    {movie.name}
 					</h3>

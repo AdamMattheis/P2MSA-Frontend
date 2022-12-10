@@ -40,16 +40,6 @@ function NewVideogameForm() {
 						name="name"
 					/>
 				</div>
-				{/* <div className="form-group">
-					<label htmlFor="pic">Videogame Picture</label>
-					<input
-						value={videogame.pic}
-						onChange={e => setVideogame({ ...videogame, pic: e.target.value })}
-						className="form-control"
-						id="pic"
-						name="pic"
-					/>
-				</div> */}
 				<div className="form-group">
 					<label htmlFor="genre">Genre</label>
 					<input

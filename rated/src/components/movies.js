@@ -20,17 +20,18 @@ const Movies = () => {
     let moviesFormatted = movies.map((movie) => {
 		return (
 			<div className='flex' key={movie.movie_id}>
-				<h2 className='text-center'>
-					<button onClick={() => navigate(`/movies/${movie.movie_id}`)} > 
-						{movie.name}
-                    </button> 
+				<h2>
+                    <div className='detailsButton'>
+                        <button className='detailsButton' onClick={() => navigate(`/movies/${movie.movie_id}`)} > 
+                            {movie.name}
+                        </button> 
+                    </div>
 				</h2>
 				<p className='text-center'>
 					Rated {movie.rating}
 				</p>
-				{/* <img style={{ maxWidth: 200 }} src={movie.pic} alt={movie.name} /> */}
 				<p className='text-center'>
-					Genre {movie.genre}
+				    Genre {movie.genre}
 				</p>
                 <p className='text-center'>
 					Length {movie.length}
