@@ -37,10 +37,10 @@ function EditVideogameForm() {
 	}
 
 	return (
-		<main>
+		<main className="moviesPage">
 			<h1>Edit Videogame</h1>
 			<form onSubmit={handleSubmit}>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="name">Videogame Name</label>
 					<input
 						required
@@ -51,7 +51,7 @@ function EditVideogameForm() {
 						name="name"
 					/>
 				</div>
-                <div className="form-group">
+                <div className="moviesPage2">
 					<label htmlFor="pic">Videogame Picture</label>
 					<input
 						value={videogame.pic}
@@ -61,7 +61,7 @@ function EditVideogameForm() {
 						name="pic"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="genre">Genre</label>
 					<input
 						value={videogame.genre}
@@ -71,7 +71,7 @@ function EditVideogameForm() {
 						name="genre"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="rating">Rated</label>
 					<input
 						value={videogame.rating}
@@ -81,7 +81,7 @@ function EditVideogameForm() {
 						name="rating"
 					/>
 				</div>
-				<input className="btn btn-primary" type="submit" value="Save" />
+				<input className="NewMovieButton" type="submit" value="Save" />
 			</form>
 		</main>
 	)

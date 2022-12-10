@@ -38,10 +38,10 @@ function EditTvshowForm() {
 	}
 
 	return (
-		<main>
+		<main className="moviesPage">
 			<h1>Edit TV Show</h1>
 			<form onSubmit={handleSubmit}>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="name">TV Show Name</label>
 					<input
 						required
@@ -52,7 +52,7 @@ function EditTvshowForm() {
 						name="name"
 					/>
 				</div>
-                <div className="form-group">
+                <div className="moviesPage2">
 					<label htmlFor="pic">TV Show Picture</label>
 					<input
 						value={tvshows.pic}
@@ -62,7 +62,7 @@ function EditTvshowForm() {
 						name="pic"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="genre">Genre</label>
 					<input
 						required
@@ -73,7 +73,7 @@ function EditTvshowForm() {
 						name="genre"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="episodes">Number of Episodes</label>
 					<input
 						value={tvshows.episodes}
@@ -83,7 +83,7 @@ function EditTvshowForm() {
 						name="episodes"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="length">TV Show Length</label>
 					<input
 						value={tvshows.length}
@@ -93,7 +93,7 @@ function EditTvshowForm() {
 						name="length"
 					/>
 				</div>
-				<input className="btn btn-primary" type="submit" value="Save" />
+				<input className="NewMovieButton" type="submit" value="Save" />
 			</form>
 		</main>
 	)

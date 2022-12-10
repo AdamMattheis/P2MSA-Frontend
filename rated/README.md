@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+Milestone 2 Project - MERN Stack Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**RATED**
 
-## Available Scripts
+## Description
+Our app is a rating website for movies, tv shows, and videogames where you can add comments to each one.
+You can also add a movie, tv show, and videogame and edit them.
+Each of these are updated to the SQL database.
+This app is an react app.
 
-In the project directory, you can run:
+## Installation
+To use this app, you will need to have Node.js and npm installed on your computer. You can download and install them from the Node.js website.
 
-### `npm start`
+Once you have Node.js and npm installed, clone or download the source code from this repository and navigate to the directory where you downloaded the code. Then run the following command to install the necessary dependencies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To run the app, in your terminal run the code:
 
-### `npm test`
+npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Homepage
+On the Homepage, you can navigate to either the movies, tv shows, or video games page. You can also click the title 'RATED' to refresh the page
 
-### `npm run build`
+## Movies, Tv Shows, Video games Page
+After clicking on one of the three options on the homepage, you are redirected to the homepage of the option you clicked on. This page shows the current list of items that are in the database and the details of each item are shown. You can click the 'add' button to add an item to the database. You can also click on the title of an item and it will redirect you to the details page of that item.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Details Page
+The details page for an item shows the data associated with that item and it also has an 'edit' and 'delete' button which redirects you to the edit page or delete the item from the database, respectively. You can add a comment and star rating to the item and it also shows the comments and star ratings already made for that specific item, which can also be deleted. This deletes them from the database
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Edit Page
+The edit page is where you can edit the data of an item and update the database after it is submitted.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Comments
+Comments and star ratings are made on the Details Page of an item and are updated or deleted from the database.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Known Issues
+Comments are populated to the details page when created and are also added to the database, but if the ID of the comment is a different number than the item ID, it won't remain populated on the details page when it is refreshed.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The background color changing sometimes get out of sync between divs and the page needs to be refreshed to start on the same color again to appear uniform.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Things to Add
+We could add a search bar to be able to search for a specific item on the main homepage. It could also have a drop down selection to choose which catagory you want to search.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+We could also use an external API to utilize a vast database of items.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ERD Image
+![ERD image](/images/PMSA2erd.png)

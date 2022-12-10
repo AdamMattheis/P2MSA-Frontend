@@ -38,10 +38,10 @@ function EditMovieForm() {
 	}
 
 	return (
-		<main>
+		<main className="moviesPage" >
 			<h1>Edit Movie</h1>
 			<form onSubmit={handleSubmit}>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="name">Movie Name</label>
 					<input
 						required
@@ -52,17 +52,7 @@ function EditMovieForm() {
 						name="name"
 					/>
 				</div>
-                <div className="form-group">
-					<label htmlFor="pic">Movie Picture</label>
-					<input
-						value={movie.pic}
-						onChange={e => setMovie({ ...movie, pic: e.target.value })}
-						className="form-control"
-						id="pic"
-						name="pic"
-					/>
-				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="genre">Genre</label>
 					<input
 						required
@@ -73,7 +63,7 @@ function EditMovieForm() {
 						name="genre"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="rating">Rating</label>
 					<input
 						value={movie.rating}
@@ -83,7 +73,7 @@ function EditMovieForm() {
 						name="rating"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="length">Movie Length</label>
 					<input
 						value={movie.length}
@@ -93,7 +83,7 @@ function EditMovieForm() {
 						name="length"
 					/>
 				</div>
-				<input className="btn btn-primary" type="submit" value="Save" />
+				<input className="NewMovieButton" type="submit" value="Save" />
 			</form>
 		</main>
 	)
