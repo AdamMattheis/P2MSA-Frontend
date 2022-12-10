@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
-//import { useNavigate } from "react-router"
 
-function NewCommentForm({ movie, onSubmit }) {
+function NewCommentForm({ onSubmit }) {
 
     const [comment, setComment] = useState({
         content: '',
@@ -10,14 +9,14 @@ function NewCommentForm({ movie, onSubmit }) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:3000/movies/${movie_id}`)
+            const response = await fetch(`http://localhost:3000/`)
             const resData = await response.json()
             setComment({ ...resData })
         }
         fetchData()
     }, [])
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault()
         onSubmit(comment)
         setComment({
@@ -29,8 +28,8 @@ function NewCommentForm({ movie, onSubmit }) {
     return (
         <form onSubmit={handleSubmit}>
             <div className="row">
-                <div className="form-group col-sm-12">
-                    <label htmlFor="content">Content</label>
+                <div className='moviesPage2'>
+                    <label htmlFor="content"></label>
                     <textarea
                         required
                         value={comment.content}
@@ -42,7 +41,7 @@ function NewCommentForm({ movie, onSubmit }) {
                 </div>
             </div>
             <div className="row">
-                <div className="form-group col-sm-4">
+                <div className='moviesPage2'>
                     <label htmlFor="stars">Star Rating</label>
                     <input
                         value={comment.stars}
@@ -57,7 +56,7 @@ function NewCommentForm({ movie, onSubmit }) {
                     />
                 </div>
             </div>
-            <input className="btn btn-primary" type="submit" value="Add Comment" />
+            <input className="NewMovieButton" type="submit" value="Add Comment" />
         </form>
     )
 }

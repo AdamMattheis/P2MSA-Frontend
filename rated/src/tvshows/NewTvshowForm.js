@@ -1,29 +1,29 @@
 import { useState } from "react"
 import { useNavigate } from "react-router"
 
-function NewMovieForm() {
+function NewTvshowForm() {
 
 	const navigate = useNavigate()
 
-	const [movie, setMovie] = useState({
+	const [tvshows, setTvshows] = useState({
 		name: '',
 		genre: '',
-		rating: '',
+		episodes: '',
 		length: ''
 	})
 
 	async function handleSubmit(e) {
 		e.preventDefault()
 
-		await fetch(`http://localhost:3000/movies`, {
+		await fetch(`http://localhost:3000/tvshows`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify(movie)
+			body: JSON.stringify(tvshows)
 		})
 
-		navigate('/movies')
+		navigate('/tvshows')
 	}
 
 	return (
@@ -36,14 +36,14 @@ function NewMovieForm() {
                 </a>
             </div>
             <hr />
-			<h1 className="moviesPage">Add a New Movie</h1>
+			<h1 className="moviesPage">Add a New TV Show</h1>
 			<form onSubmit={handleSubmit}>
 				<div className="moviesPage2">
-					<label htmlFor="name">Movie Name</label>
+					<label htmlFor="name">TV Show Name</label>
 					<input
                         required
-						value={movie.name}
-						onChange={e => setMovie({ ...movie, name: e.target.value })}
+						value={tvshows.name}
+						onChange={e => setTvshows({ ...tvshows, name: e.target.value })}
 						className="form-control"
 						id="name"
 						name="name"
@@ -52,37 +52,37 @@ function NewMovieForm() {
 				<div className="moviesPage2">
 					<label htmlFor="genre">Genre</label>
 					<input
-						value={movie.genre}
-						onChange={e => setMovie({ ...movie, genre: e.target.value })}
+						value={tvshows.genre}
+						onChange={e => setTvshows({ ...tvshows, genre: e.target.value })}
 						className="form-control"
 						id="genre"
 						name="genre"
 					/>
 				</div>
 				<div className="moviesPage2">
-					<label htmlFor="rating">Rating</label>
+					<label htmlFor="episodes">Number of Episodes</label>
 					<input
-						value={movie.rating}
-						onChange={e => setMovie({ ...movie, rating: e.target.value })}
+						value={tvshows.episodes}
+						onChange={e => setTvshows({ ...tvshows, episodes: e.target.value })}
 						className="form-control"
-						id="rating"
-						name="rating"
+						id="episodes"
+						name="episodes"
 					/>
 				</div>
 				<div className="moviesPage2">
-					<label htmlFor="length">Movie Length</label>
+					<label htmlFor="length">TV Show Length</label>
 					<input
-						value={movie.length}
-						onChange={e => setMovie({ ...movie, length: e.target.value })}
+						value={tvshows.length}
+						onChange={e => setTvshows({ ...tvshows, length: e.target.value })}
 						className="form-control"
 						id="length" name="length" />
 				</div>
                 <div className="moviesPage2">
-                    <input className="NewMovieButton" type="submit" value="Add Movie" />
+                    <input className="NewMovieButton" type="submit" value="Add TV Show" />
                 </div>
 			</form>
 		</main>
 	)
 }
 
-export default NewMovieForm
+export default NewTvshowForm
