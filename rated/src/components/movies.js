@@ -19,20 +19,20 @@ const Movies = () => {
 
     let moviesFormatted = movies.map((movie) => {
 		return (
-			<div className="col-sm-6" key={movie.movie_id}>
-				<h2>
+			<div className='flex' key={movie.movie_id}>
+				<h2 className='text-center'>
 					<button onClick={() => navigate(`/movies/${movie.movie_id}`)} > 
 						{movie.name}
                     </button> 
 				</h2>
-				<p className="text-center">
+				<p className='text-center'>
 					Rated {movie.rating}
 				</p>
 				{/* <img style={{ maxWidth: 200 }} src={movie.pic} alt={movie.name} /> */}
-				<p className="text-center">
+				<p className='text-center'>
 					Genre {movie.genre}
 				</p>
-                <p className="text-center">
+                <p className='text-center'>
 					Length {movie.length}
 				</p>
 			</div>
@@ -49,15 +49,20 @@ const Movies = () => {
                 </button>
             </a>
         </div>
+        <hr />
         <div className='moviesPage'>
-            <p>list of movies</p>
-            <a href='/movies/new'>
-                <button>
-                    New Movie
-                </button>
-            </a>
+            <div>
+                <p>Movies</p>
+            </div>
+            <div>
+                <a href='/movies/new' >
+                    <button className='NewMovieButton'>
+                        New Movie
+                    </button>
+                </a>
+            </div>
         </div>
-        <div className='tvShowsPage'>
+        <div className='itemsPage'>
             {moviesFormatted}
         </div>
     </main>

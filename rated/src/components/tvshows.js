@@ -21,7 +21,7 @@ const Tvshows = () => {
 
     let tvshowsFormatted = tvshows.map((tvshows) => {
 		return (
-			<div className="col-sm-6" key={tvshows.tvshows_id}>
+			<div className='flex' key={tvshows.tvshows_id}>
 				<h2>
 					<button onClick={() => navigate(`/tvshows/${tvshows.tvshows_id}`)} > 
 						{tvshows.name}
@@ -51,15 +51,20 @@ const Tvshows = () => {
                 </button>
             </a>
         </div>
-        <div className='tvShowsPage'>
-            <p>list of TV Shows</p>
-            <a href='/tvshows/new'>
-                <button>
-                    New TV Show
-                </button>
-            </a>
+        <hr />
+        <div className='moviesPage'>
+            <div>
+                <p>TV Shows</p>
+            </div>
+            <div>
+                <a href='/tvshows/new' >
+                    <button className='NewMovieButton'>
+                        New TV Show
+                    </button>
+                </a>
+            </div>
         </div>
-        <div className='tvMoviesPage'>
+        <div className='itemsPage'>
             {tvshowsFormatted}
         </div>
     </main>

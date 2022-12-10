@@ -19,7 +19,7 @@ const Videogame = () => {
 
     let videogameFormatted = videogame.map((videogame) => {
 		return (
-			<div className="col-sm-6" key={videogame.videogame_id}>
+			<div className="flex" key={videogame.videogame_id}>
 				<h2>
 					<button onClick={() => navigate(`/videogames/${videogame.videogame_id}`)} > 
 						{videogame.name}
@@ -46,15 +46,20 @@ const Videogame = () => {
                 </button>
             </a>
         </div>
+        <hr />
         <div className='moviesPage'>
-            <p>list of Videogames</p>
-            <a href='/videogames/new'>
-                <button>
-                    New Videogame
-                </button>
-            </a>
+            <div>
+                <p>Video Games</p>
+            </div>
+            <div>
+                <a href='/videogames/new' >
+                    <button className='NewMovieButton'>
+                        New Video Game
+                    </button>
+                </a>
+            </div>
         </div>
-        <div className='videogamesPage'>
+        <div className='itemsPage'>
             {videogameFormatted}
         </div>
     </main>

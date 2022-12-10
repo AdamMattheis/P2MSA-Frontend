@@ -1,12 +1,48 @@
 .App {
   text-align: center;
+  padding-top: 100px;
 }
+
+body {
+  background-color: #ff0000;
+  transition: background-color 50s;
+  animation: change-color 90s infinite;
+}
+
+@keyframes change-color {
+  0% {
+      background-color: #ff0000;
+  }
+  16.66% {
+      background-color: #ff7f00;
+  }
+  33.33% {
+      background-color: #ffff00;
+  }
+  50% {
+      background-color: #00ff00;
+  }
+  66.66% {
+      background-color: #0000ff;
+  }
+  83.33% {
+      background-color: #4b0082;
+  }
+  100% {
+      background-color: #ff0000;
+  }
+}
+
 
 .title {
   display: flex;
+  margin-top: 30px;
+  background: none;
+  font-family: 'Gruppo';
+  border: none;
   text-align: center;
   align-items: center;
-  font-size: 4vw;
+  font-size: 8vw;
   padding-top: 10px;
   justify-content: center;
   color:black;
@@ -22,38 +58,98 @@ a:visited {
 }
 
 .App-buttons:hover{
-  background-color: black;
-  color: aquamarine;
+  background-color: white;
+  color: black;
 }
 
 .background-buttons{
-  background-color: white;
+  padding-top: 100px;
+  background-color: #ff0000;
+  transition: background-color 50s;
+  animation: change-color 90s infinite;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   list-style: none;
   flex-grow: 1;
+  
 }
 
 .App-buttons {
+  font-family: 'Allerta Stencil';
   display: flex;
   justify-content: space-evenly;
   font-size: 3vw;
   padding: 30px;
   color: whitesmoke;
-  background-color: purple;
+  border-radius: 40px;
+  background-color: black;
   flex-direction: row;
-  flex-grow: 1;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background-color: black;
+  margin: 40px 200px 5px 200px;
 }
 
 .moviesPage{
-  display: flex;
-  justify-content: space-evenly;
+  display: block;
+  justify-items: center;
+  text-align: center;
+  font-family: 'Allerta Stencil';
+
   font-size: 3vw;
-  padding: 30px;
+  padding: 10px;
+  color: black;
+  background-color: #ff0000;
+  transition: background-color 50s;
+  animation: change-color 90s infinite;
+}
+
+.itemsPage{
+  display: flex;
+  font-family: 'Allerta Stencil';
+  flex-flow: row wrap;
+  flex: 0 0 33.33%;
+  font-size: 1vw;
+  justify-content: space-evenly;
+  padding: 10px;
+  color: black;
+  background-color: #ff0000;
+  transition: background-color 50s;
+  animation: change-color 90s infinite;
+}
+
+.flex-container {
+  flex-wrap: wrap;
+}
+
+.flex{
+  justify-content: space-evenly;
+  margin: 60px;
+  padding: 80px;
+}
+
+.NewMovieButton{
+  font-family: 'Allerta Stencil';
+  text-align: center;
+  justify-items: center;
+  font-size: 0.9vw;
+  padding: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
   color: whitesmoke;
-  background-color: red;
+  border-radius: 40px;
+  background-color: black;
   flex-direction: row;
+}
+
+.NewMovieButton:hover{
+  background-color: white;
+  color: black;
 }
 
 .tvShowsPage{
