@@ -28,12 +28,20 @@ function NewTvshowForm() {
 
 	return (
 		<main>
-			<h1>Add a New TV Show</h1>
+            <div className='title'>
+                <a href='/'>
+                    <button className='title'>
+                        RATED
+                    </button>
+                </a>
+            </div>
+            <hr />
+			<h1 className="moviesPage">Add a New TV Show</h1>
 			<form onSubmit={handleSubmit}>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="name">TV Show Name</label>
 					<input
-						required
+                        required
 						value={tvshows.name}
 						onChange={e => setTvshows({ ...tvshows, name: e.target.value })}
 						className="form-control"
@@ -41,7 +49,7 @@ function NewTvshowForm() {
 						name="name"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="genre">Genre</label>
 					<input
 						value={tvshows.genre}
@@ -51,7 +59,7 @@ function NewTvshowForm() {
 						name="genre"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="episodes">Number of Episodes</label>
 					<input
 						value={tvshows.episodes}
@@ -61,7 +69,7 @@ function NewTvshowForm() {
 						name="episodes"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="length">TV Show Length</label>
 					<input
 						value={tvshows.length}
@@ -69,7 +77,9 @@ function NewTvshowForm() {
 						className="form-control"
 						id="length" name="length" />
 				</div>
-				<input className="btn btn-primary" type="submit" value="Add TV Show" />
+                <div className="moviesPage2">
+                    <input className="NewMovieButton" type="submit" value="Add TV Show" />
+                </div>
 			</form>
 		</main>
 	)

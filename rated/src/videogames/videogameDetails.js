@@ -103,48 +103,56 @@ function VideogameDetails() {
 
 
 	return (
-		<main>
-			<div className="row">
-				<div className="col-sm-6">
-					<h3>
-					    {videogame.name}
-					</h3>
+		<main className="moviesPage">
+			<div className="text-center">
+				<div className="moviesPage">
+					<h1>
+						{videogame.name}
+					</h1>
 				</div>
-				<div className="col-sm-6">
-					<h2>
-						Genre
-					</h2>
-					{videogame.genre}
+				<div className="moviesPage3">
+					<p>
+						Genre:   {videogame.genre}
+					</p>
+					
 					<br />
-					<h3>
-						Rated {videogame.rating}.
-					</h3>
+					<p>
+						Rated:   {videogame.rating}.
+					</p>
 					<br />
-                    <h3>
-						videogame Length {videogame.length}.
-					</h3>
-					<br />
-					<button className="btn btn-warning" onClick={editVideogame}>
+					<button className="NewMovieButton" onClick={editVideogame}>
 						Edit
 					</button>
-					<button type="submit" className="btn btn-danger" onClick={deleteVideogame}>
+					<button type="submit" className="NewMovieButton" onClick={deleteVideogame}>
 						Delete
 					</button>
 				</div>
 			</div>
 			<hr />
-			<h2>Comments</h2>
-			<div className="row">
+			<h2 className="moviesPage3">Comments</h2>
+			<div className="itemsPage">
 				{comments}
 			</div>
 			<hr />
-            New Comment
-			<NewCommentForm
-				videogame={videogame}
-				onSubmit={createComment}
-			/>
+			<div className="moviesPage3">
+				New Comment
+			</div>
+			<div className="moviesPage4">
+				<NewCommentForm
+					videogame={videogame}
+					onSubmit={createComment}
+				/>
+			</div>
+			<div>
+				<a href='/videogames' >
+					<button className='NewMovieButton'>
+						Back
+					</button>
+				</a>
+			</div>
 		</main>
 	)
 }
 
 export default VideogameDetails
+

@@ -20,16 +20,16 @@ const Videogame = () => {
     let videogameFormatted = videogame.map((videogame) => {
 		return (
 			<div className="flex" key={videogame.videogame_id}>
-				<h2>
-					<button onClick={() => navigate(`/videogames/${videogame.videogame_id}`)} > 
+				<h2 className='detailsButton'>
+					<button className='detailsButton' onClick={() => navigate(`/videogames/${videogame.videogame_id}`)} > 
 						{videogame.name}
                     </button> 
 				</h2>
 				<p className="text-center">
-					Rated {videogame.rating}
+					Rated:  {videogame.rating}
 				</p>
 				<p className="text-center">
-					Genre {videogame.genre}
+					Genre: {videogame.genre}
         </p>
 			</div>
 		)

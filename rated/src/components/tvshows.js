@@ -20,19 +20,19 @@ const Tvshows = () => {
     let tvshowsFormatted = tvshows.map((tvshows) => {
 		return (
 			<div className='flex' key={tvshows.tvshows_id}>
-				<h2>
-					<button onClick={() => navigate(`/tvshows/${tvshows.tvshows_id}`)} > 
+				<h2 className='detailsButton'>
+					<button className='detailsButton' onClick={() => navigate(`/tvshows/${tvshows.tvshows_id}`)} > 
 						{tvshows.name}
-                    </button> 
+          </button> 
 				</h2>
 				<p className="text-center">
-					Genre {tvshows.genre}
+					Genre: {tvshows.genre}
 				</p>
         <p className="text-center">
-					 Number of Episodes {tvshows.episodes}
+					 Number of Episodes: {tvshows.episodes}
 				</p>
         <p className="text-center">
-					Length {tvshows.length}
+					Length: {tvshows.length}
 				</p>
 			</div>
 		)

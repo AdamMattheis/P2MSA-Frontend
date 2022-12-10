@@ -28,8 +28,8 @@ function NewCommentForm({ onSubmit }) {
     return (
         <form onSubmit={handleSubmit}>
             <div className="row">
-                <div className="form-group col-sm-12">
-                    <label htmlFor="content">Content</label>
+                <div className='moviesPage2'>
+                    <label htmlFor="content"></label>
                     <textarea
                         required
                         value={comment.content}
@@ -41,7 +41,7 @@ function NewCommentForm({ onSubmit }) {
                 </div>
             </div>
             <div className="row">
-                <div className="form-group col-sm-4">
+                <div className='moviesPage2'>
                     <label htmlFor="stars">Star Rating</label>
                     <input
                         value={comment.stars}
@@ -56,7 +56,7 @@ function NewCommentForm({ onSubmit }) {
                     />
                 </div>
             </div>
-            <input className="btn btn-primary" type="submit" value="Add Comment" />
+            <input className="NewMovieButton" type="submit" value="Add Comment" />
         </form>
     )
 }

@@ -28,12 +28,20 @@ function NewMovieForm() {
 
 	return (
 		<main>
-			<h1>Add a New Movie</h1>
+            <div className='title'>
+                <a href='/'>
+                    <button className='title'>
+                        RATED
+                    </button>
+                </a>
+            </div>
+            <hr />
+			<h1 className="moviesPage">Add a New Movie</h1>
 			<form onSubmit={handleSubmit}>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="name">Movie Name</label>
 					<input
-						required
+                        required
 						value={movie.name}
 						onChange={e => setMovie({ ...movie, name: e.target.value })}
 						className="form-control"
@@ -41,7 +49,7 @@ function NewMovieForm() {
 						name="name"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="genre">Genre</label>
 					<input
 						value={movie.genre}
@@ -51,7 +59,7 @@ function NewMovieForm() {
 						name="genre"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="rating">Rating</label>
 					<input
 						value={movie.rating}
@@ -61,7 +69,7 @@ function NewMovieForm() {
 						name="rating"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="length">Movie Length</label>
 					<input
 						value={movie.length}
@@ -69,7 +77,9 @@ function NewMovieForm() {
 						className="form-control"
 						id="length" name="length" />
 				</div>
-				<input className="btn btn-primary" type="submit" value="Add Movie" />
+                <div className="moviesPage2">
+                    <input className="NewMovieButton" type="submit" value="Add Movie" />
+                </div>
 			</form>
 		</main>
 	)

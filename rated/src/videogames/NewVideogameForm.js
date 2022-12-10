@@ -27,10 +27,18 @@ function NewVideogameForm() {
 
 	return (
 		<main>
-			<h1>Add a New Videogame</h1>
+			<div className='title'>
+                <a href='/'>
+                    <button className='title'>
+                        RATED
+                    </button>
+                </a>
+            </div>
+            <hr />
+			<h1 className="moviesPage">Add a New Video Game</h1>
 			<form onSubmit={handleSubmit}>
-				<div className="form-group">
-					<label htmlFor="name">Videogame Name</label>
+				<div className="moviesPage2">
+					<label htmlFor="name">Video Game Name</label>
 					<input
 						required
 						value={videogame.name}
@@ -40,7 +48,7 @@ function NewVideogameForm() {
 						name="name"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="genre">Genre</label>
 					<input
 						value={videogame.genre}
@@ -50,7 +58,7 @@ function NewVideogameForm() {
 						name="genre"
 					/>
 				</div>
-				<div className="form-group">
+				<div className="moviesPage2">
 					<label htmlFor="rating">Rated</label>
 					<input
 						value={videogame.rating}
@@ -60,7 +68,9 @@ function NewVideogameForm() {
 						name="rating"
 					/>
 				</div>
-				<input className="btn btn-primary" type="submit" value="Add Videogame" />
+				<div className="moviesPage2">
+                    <input className="NewMovieButton" type="submit" value="Add Video Game" />
+                </div>
 			</form>
 		</main>
 	)

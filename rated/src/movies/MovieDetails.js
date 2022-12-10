@@ -103,47 +103,57 @@ function MovieDetails() {
 
 
 	return (
-		<main>
-			<div className="text center">
-				<div className="col-sm-6">
-					<img style={{ maxWidth: 200 }} src={movie.pic} alt={movie.name} />
-					<h3>
+		<main className="moviesPage">
+			<div className="text-center">
+				<div className="moviesPage">
+					<h1>
 					    {movie.name}
-					</h3>
+					</h1>
 				</div>
-				<div className="col-sm-6">
-					<h2>
-						Genre
-					</h2>
-					{movie.genre}
+				<div className="moviesPage3">
+					<p>
+						Genre:   {movie.genre}
+					</p>
+					
 					<br />
-					<h3>
-						Rated {movie.rating}.
-					</h3>
+					<p>
+						Rated:   {movie.rating}.
+					</p>
 					<br />
-                    <h3>
-						Movie Length {movie.length}.
-					</h3>
+                    <p>
+						Movie Length:   {movie.length}.
+					</p>
 					<br />
-					<button className="btn btn-warning" onClick={editMovie}>
+					<button className="NewMovieButton" onClick={editMovie}>
 						Edit
 					</button>
-					<button type="submit" className="btn btn-danger" onClick={deleteMovie}>
+					<button type="submit" className="NewMovieButton" onClick={deleteMovie}>
 						Delete
 					</button>
 				</div>
 			</div>
 			<hr />
-			<h2>Comments</h2>
-			<div className="row">
+			<h2 className="moviesPage3">Comments</h2>
+			<div className="itemsPage">
 				{comments}
 			</div>
 			<hr />
-            New Comment
-			<NewCommentForm
-				movie={movie}
-				onSubmit={createComment}
-			/>
+            <div className="moviesPage3">
+                New Comment
+            </div>
+            <div className="moviesPage4">
+                <NewCommentForm
+                    movie={movie}
+                    onSubmit={createComment}
+                />
+            </div>
+            <div>
+                <a href='/movies' >
+                    <button className='NewMovieButton'>
+                        Back
+                    </button>
+                </a>
+            </div>
 		</main>
 	)
 }

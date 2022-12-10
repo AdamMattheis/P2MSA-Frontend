@@ -28,13 +28,13 @@ const Movies = () => {
                     </div>
 				</h2>
 				<p className='text-center'>
-					Rated {movie.rating}
+					Rated: {movie.rating}
 				</p>
 				<p className='text-center'>
-				    Genre {movie.genre}
+				    Genre: {movie.genre}
 				</p>
                 <p className='text-center'>
-					Length {movie.length}
+					Movie Length: {movie.length}
 				</p>
 			</div>
 		)

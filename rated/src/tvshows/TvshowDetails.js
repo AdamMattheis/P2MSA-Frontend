@@ -103,48 +103,59 @@ function TvshowDetails() {
 
 
 	return (
-		<main>
-			<div className="row">
-				<div className="col-sm-6">
-					<h3>
-					    {tvshows.name}
-					</h3>
-				</div>
-				<div className="col-sm-6">
-					<h2>
-						Genre
-					</h2>
-					{tvshows.genre}
-					<br />
-					<h3>
-						Number of Episodes {tvshows.episodes}.
-					</h3>
-					<br />
-                    <h3>
-						TV Show Length {tvshows.length}.
-					</h3>
-					<br />
-					<button className="btn btn-warning" onClick={editTvshows}>
-						Edit
-					</button>
-					<button type="submit" className="btn btn-danger" onClick={deleteTvshows}>
-						Delete
-					</button>
-				</div>
-			</div>
-			<hr />
-			<h2>Comments</h2>
-			<div className="row">
-				{comments}
-			</div>
-			<hr />
-            New Comment
-			<NewCommentForm
-				tvshows={tvshows}
-				onSubmit={createComment}
-			/>
-		</main>
-	)
+        <main className="moviesPage">
+            <div className="text-center">
+                <div className="moviesPage">
+                    <h1>
+                        {tvshows.name}
+                    </h1>
+                </div>
+                <div className="moviesPage3">
+                    <p>
+                        Genre:   {tvshows.genre}
+                    </p>
+                    <br />
+                    <p>
+                        Number of Episodes:   {tvshows.episodes}.
+                    </p>
+                    <br />
+                    <p>
+                        TV Show Length:   {tvshows.length}.
+                    </p>
+                    <br />
+                    <button className="NewMovieButton" onClick={editTvshows}>
+                        Edit
+                    </button>
+                    <button type="submit" className="NewMovieButton" onClick={deleteTvshows}>
+                        Delete
+                    </button>
+                </div>
+            </div>
+            <hr />
+            <h2 className="moviesPage3">Comments</h2>
+            <div className="itemsPage">
+                {comments}
+            </div>
+            <hr />
+            <div className="moviesPage3">
+                New Comment
+            </div>
+            <div className="moviesPage4">
+                <NewCommentForm
+                    tvshows={tvshows}
+                    onSubmit={createComment}
+                />
+            </div>
+            <div>
+                <a href='/tvshows' >
+                    <button className='NewMovieButton'>
+                        Back
+                    </button>
+                </a>
+            </div>
+        </main>
+    )
 }
 
 export default TvshowDetails
+

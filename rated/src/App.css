@@ -5,8 +5,8 @@
 
 body {
   background-color: #ff0000;
-  transition: background-color 50s;
-  animation: change-color 90s infinite;
+  transition: background-color 30s;
+  animation: change-color 30s infinite;
 }
 
 @keyframes change-color {
@@ -65,8 +65,8 @@ a:visited {
 .background-buttons{
   padding-top: 100px;
   background-color: #ff0000;
-  transition: background-color 50s;
-  animation: change-color 90s infinite;
+  transition: background-color 30s;
+  animation: change-color 30s infinite;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -104,8 +104,50 @@ hr {
   padding: 10px;
   color: black;
   background-color: #ff0000;
-  transition: background-color 50s;
-  animation: change-color 90s infinite;
+  transition: background-color 30s;
+  animation: change-color 30s infinite;
+}
+
+.moviesPage2{
+  display: block;
+  justify-items: center;
+  text-align: center;
+  font-family: 'Allerta Stencil';
+
+  font-size: 1vw;
+  padding: 10px;
+  color: black;
+  background-color: #ff0000;
+  transition: background-color 30s;
+  animation: change-color 30s infinite;
+}
+
+.moviesPage3{
+  display: block;
+  justify-items: center;
+  text-align: center;
+  font-family: 'Allerta Stencil';
+
+  font-size: 2vw;
+  padding: 5px;
+  color: black;
+  background-color: #ff0000;
+  transition: background-color 30s;
+  animation: change-color 30s infinite;
+}
+
+.moviesPage4{
+  display: block;
+  justify-items: center;
+  text-align: center;
+  font-family: 'Allerta Stencil';
+
+  font-size: 1.5vw;
+  padding: 10px;
+  color: black;
+  background-color: #ff0000;
+  transition: background-color 30s;
+  animation: change-color 30s infinite;
 }
 
 .itemsPage{
@@ -118,8 +160,8 @@ hr {
   padding: 10px;
   color: black;
   background-color: #ff0000;
-  transition: background-color 50s;
-  animation: change-color 90s infinite;
+  transition: background-color 30s;
+  animation: change-color 30s infinite;
 }
 
 .flex-container {
@@ -141,11 +183,9 @@ hr {
   padding: 8px;
   padding-top: 5px;
   padding-bottom: 5px;
-  
   color: whitesmoke;
   border-radius: 40px;
   background-color: black;
-  flex-direction: row;
 }
 
 .NewMovieButton:hover{
