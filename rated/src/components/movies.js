@@ -2,8 +2,6 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useNavigate } from "react-router";
 
-//import { useNavigate, useParams } from "react-router"
-
 const Movies = () => {
 
     const navigate = useNavigate()

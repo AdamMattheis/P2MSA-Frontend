@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 //import { useNavigate } from "react-router"
 
-function NewCommentForm({ movie, onSubmit }) {
+function NewCommentForm({ onSubmit }) {
 
     const [comment, setComment] = useState({
         content: '',
@@ -10,14 +10,14 @@ function NewCommentForm({ movie, onSubmit }) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:3000/movies/${movie_id}`)
+            const response = await fetch(`http://localhost:3000/`)
             const resData = await response.json()
             setComment({ ...resData })
         }
         fetchData()
     }, [])
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault()
         onSubmit(comment)
         setComment({
