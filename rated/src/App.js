@@ -14,7 +14,10 @@ import TvshowDetails from './tvshows/TvshowDetails'
 import EditTvshowForm from './tvshows/EditTvshowForm'
 
 
-import VideoGames from './components/videogames'
+import Videogame from './components/videogames'
+import NewVideogameForm from './videogames/NewVideogameForm'
+import VideogameDetails from './videogames/videogameDetails'
+import EditVideogameForm from './videogames/EditVideogameForm'
 
 
 function App() {
@@ -30,7 +33,10 @@ function App() {
           <Route path="/tvshows/new" element={<NewTvshowForm />} />
           <Route path="/tvshows/:tvshows_id" element={<TvshowDetails />} />
           <Route path="/tvshows/:tvshows_id/edit" element={<EditTvshowForm />} />
-          <Route path="/videogames" element={<VideoGames />} />
+          <Route path="/videogames" element={<Videogame />} />
+          <Route path="/videogames/new" element={<NewVideogameForm />} />
+          <Route path="/videogames/:videogame_id" element={<VideogameDetails />} />
+          <Route path="/videogames/:videogame_id/edit" element={<EditVideogameForm />} />
         </Routes>
       </BrowserRouter>
   );
